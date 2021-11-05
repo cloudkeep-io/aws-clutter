@@ -1,0 +1,1882 @@
+[
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1309000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.1047000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "53.6576000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0065000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1642200000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0856800000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0199920000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0595000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0654500000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000655"
+                }
+            }
+        },
+        "location": "Africa (Cape Town)",
+        "partition": "aws",
+        "rzCode": "af-south-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1320000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.1056000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "54.0672000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0066000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1518000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0792000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1518000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0792000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0554400000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0388080000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0198000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0594000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0880000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000880"
+                }
+            }
+        },
+        "location": "Asia Pacific (Hong Kong)",
+        "partition": "aws",
+        "rzCode": "ap-east-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1420000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0740000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1420000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0740000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0518000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0362600000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "Asia Pacific (Tokyo)",
+        "partition": "aws",
+        "rzCode": "ap-northeast-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1140000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0912000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "46.6944000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0057000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1278000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0666000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1278000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0666000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0466200000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0326340000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0174000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0510000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "Asia Pacific (Seoul)",
+        "partition": "aws",
+        "rzCode": "ap-northeast-2",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1420000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0740000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "Asia Pacific (Osaka)",
+        "partition": "aws",
+        "rzCode": "ap-northeast-3",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1140000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0912000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "46.6944000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0057000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1310000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0680000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1310000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0680000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0476000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0333200000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0174000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0510000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "Asia Pacific (Mumbai)",
+        "partition": "aws",
+        "rzCode": "ap-south-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0720000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0720000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0504000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0352800000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "Asia Pacific (Singapore)",
+        "partition": "aws",
+        "rzCode": "ap-southeast-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0720000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0720000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0504000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0352800000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "Asia Pacific (Sydney)",
+        "partition": "aws",
+        "rzCode": "ap-southeast-2",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1100000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0880000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "45.0560000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0055000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0720000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0720000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0504000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0352800000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0168000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0500000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0550000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000550"
+                }
+            }
+        },
+        "location": "Canada (Central)",
+        "partition": "aws",
+        "rzCode": "ca-central-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1190000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0952000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "48.7424000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1490000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0780000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1490000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0780000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0546000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0382200000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0590000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000590"
+                }
+            }
+        },
+        "location": "EU (Frankfurt)",
+        "partition": "aws",
+        "rzCode": "eu-central-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1045000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0836000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "42.8032000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0052000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1311000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0684000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1311000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0684000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0478800000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0335160000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0159600000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0475000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0522500000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000520"
+                }
+            }
+        },
+        "location": "EU (Stockholm)",
+        "partition": "aws",
+        "rzCode": "eu-north-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1155000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0924000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "47.3088000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0058000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1449000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0756000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0176400000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0525000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0577500000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000578"
+                }
+            }
+        },
+        "location": "EU (Milan)",
+        "partition": "aws",
+        "rzCode": "eu-south-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1100000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0880000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "45.0560000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0055000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0720000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0720000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0504000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0352800000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0168000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0500000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0550000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000550"
+                }
+            }
+        },
+        "location": "EU (Ireland)",
+        "partition": "aws",
+        "rzCode": "eu-west-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1160000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0928000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "47.5136000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0058000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1450000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0760000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1450000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0760000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0532000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0372400000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0174000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0530000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0580000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000580"
+                }
+            }
+        },
+        "location": "EU (London)",
+        "partition": "aws",
+        "rzCode": "eu-west-2",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1160000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0928000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "47.5136000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0058000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1450000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0760000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0174000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0530000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0580000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000580"
+                }
+            }
+        },
+        "location": "EU (Paris)",
+        "partition": "aws",
+        "rzCode": "eu-west-3",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1210000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0968000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.5616000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0061000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1518000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0792000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1518000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0792000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0554400000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0388080000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0184800000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0550000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0605000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000605"
+                }
+            }
+        },
+        "location": "Middle East (Bahrain)",
+        "partition": "aws",
+        "rzCode": "me-south-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1900000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.1520000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "77.8240000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0095000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.2380000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0910000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0288000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0860000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000001200"
+                }
+            }
+        },
+        "location": "South America (Sao Paulo)",
+        "partition": "aws",
+        "rzCode": "sa-east-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1000000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "40.9600000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0050000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1250000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0650000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1250000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0650000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0455000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0318500000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0150000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0450000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0500000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000500"
+                }
+            }
+        },
+        "location": "US East (N. Virginia)",
+        "partition": "aws",
+        "rzCode": "us-east-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1000000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "40.9600000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0050000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1250000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0650000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1250000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0650000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0455000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0318500000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0150000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0450000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0500000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000500"
+                }
+            }
+        },
+        "location": "US East (Ohio)",
+        "partition": "aws",
+        "rzCode": "us-east-2",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0720000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0720000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0504000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0352800000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "US West (N. California)",
+        "partition": "aws",
+        "rzCode": "us-west-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1000000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "40.9600000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0050000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1250000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0650000000"
+                }
+            },
+            "io2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1250000000"
+                },
+                "pricePerTier1IOPSMonth": {
+                    "USD": "0.0650000000"
+                },
+                "pricePerTier2IOPSMonth": {
+                    "USD": "0.0455000000"
+                },
+                "pricePerTier3IOPSMonth": {
+                    "USD": "0.0318500000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0150000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0450000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0500000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000500"
+                }
+            }
+        },
+        "location": "US West (Oregon)",
+        "partition": "aws",
+        "rzCode": "us-west-2",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0780000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0650000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000650"
+                }
+            }
+        },
+        "location": "AWS GovCloud (US-East)",
+        "partition": "aws-us-gov",
+        "rzCode": "us-gov-east-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0780000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0650000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000650"
+                }
+            }
+        },
+        "location": "AWS GovCloud (US-West)",
+        "partition": "aws-us-gov",
+        "rzCode": "us-gov-west-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "CNY": "0.7460000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "CNY": "0.5968000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "CNY": "305.5616000000"
+                },
+                "pricePerIOPSMonth": {
+                    "CNY": "0.0373000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "CNY": "0.8580000000"
+                },
+                "pricePerIOPSMonth": {
+                    "CNY": "0.4480000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "CNY": "0.1120000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "CNY": "0.3360000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "CNY": "0.4090000000"
+                },
+                "pricePerIOs": {
+                    "CNY": "0.0000004090"
+                }
+            }
+        },
+        "location": "China (Beijing)",
+        "partition": "aws-cn",
+        "rzCode": "cn-north-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "CNY": "0.6640000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "CNY": "0.5312000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "CNY": "271.9744000000"
+                },
+                "pricePerIOPSMonth": {
+                    "CNY": "0.0332000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "CNY": "0.7640000000"
+                },
+                "pricePerIOPSMonth": {
+                    "CNY": "0.3990000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "CNY": "0.0996000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "CNY": "0.2990000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "CNY": "0.3640000000"
+                },
+                "pricePerIOs": {
+                    "CNY": "0.0000003640"
+                }
+            }
+        },
+        "location": "China (Ningxia)",
+        "partition": "aws-cn",
+        "rzCode": "cn-northwest-1",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Boston)",
+        "rzCode": "use1-bos1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Chicago)",
+        "rzCode": "use1-chi1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Dallas)",
+        "rzCode": "use1-dfw1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Kansas City 2)",
+        "rzCode": "use1-mci1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Miami)",
+        "rzCode": "use1-mia1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Minneapolis)",
+        "rzCode": "use1-msp1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (New York City)",
+        "rzCode": "use1-nyc1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Philadelphia)",
+        "rzCode": "use1-phl1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Denver)",
+        "rzCode": "usw2-den1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Las Vegas)",
+        "rzCode": "usw2-las1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0780000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            }
+        },
+        "location": "US West (Los Angeles)",
+        "rzCode": "usw2-lax1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0780000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            }
+        },
+        "location": "US West (Los Angeles)",
+        "rzCode": "usw2-lax1-az2",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Portland)",
+        "rzCode": "usw2-pdx1-az1",
+        "rzType": "local_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1800000000"
+                }
+            }
+        },
+        "location": "Asia Pacific (KDDI) - Osaka",
+        "rzCode": "apne1-wl1-kix-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1800000000"
+                }
+            }
+        },
+        "location": "Asia Pacific (KDDI) - Tokyo",
+        "rzCode": "apne1-wl1-nrt-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1510000000"
+                }
+            }
+        },
+        "location": "Europe (Vodafone) - London",
+        "rzCode": "euw2-wl1-lon-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - Atlanta",
+        "rzCode": "use1-wl1-atl-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - Boston",
+        "rzCode": "use1-wl1-bos-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - Chicago",
+        "rzCode": "use1-wl1-chi-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - Dallas",
+        "rzCode": "use1-wl1-dfw-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - Houston",
+        "rzCode": "use1-wl1-iah-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - Miami",
+        "rzCode": "use1-wl1-mia-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - New York",
+        "rzCode": "use1-wl1-nyc-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US East (Verizon) - Washington DC",
+        "rzCode": "use1-wl1-was-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Verizon) - Denver",
+        "rzCode": "usw2-wl1-den-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Verizon) - Las Vegas",
+        "rzCode": "usw2-wl1-las-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Verizon) - Phoenix",
+        "rzCode": "usw2-wl1-phx-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Verizon) - Seattle",
+        "rzCode": "usw2-wl1-sea-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1500000000"
+                }
+            }
+        },
+        "location": "US West (Verizon) - San Francisco Bay Area",
+        "rzCode": "usw2-wl1-sfo-wlz1",
+        "rzType": "wavelength_zone"
+    }
+]
