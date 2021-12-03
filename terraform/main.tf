@@ -1,18 +1,28 @@
 locals {
   repository_name     = "cloudkeep/aws-clutter-meter"
   function_name       = "aws-clutter-meter"
-  image_tag           = "latest"
   ecr_repository_name = local.repository_name
 }
 
-provider "aws" {}
-provider "docker" {}
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "2.15.0"
+    }
+  }
+}
 
 data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
 data "docker_registry_image" "lambda" {
-  name = "${local.repository_name}:${local.image_tag}"
+  name = "${local.repository_name}:${var.image_tag}"
 }
 
 resource "aws_ecr_repository" "repo" {
@@ -26,11 +36,11 @@ resource "null_resource" "ecr_image" {
 
   provisioner "local-exec" {
     command = <<EOF
-           docker pull ${local.repository_name}:${local.image_tag}
+           docker pull ${local.repository_name}:${var.image_tag}
            aws ecr get-login-password --region ${data.aws_region.current.id} | \
              docker login --username AWS --password-stdin ${data.aws_caller_identity.current.account_id}.dkr.ecr.${data.aws_region.current.id}.amazonaws.com
-           docker tag ${local.repository_name}:${local.image_tag} ${aws_ecr_repository.repo.repository_url}:${local.image_tag}
-           docker push ${aws_ecr_repository.repo.repository_url}:${local.image_tag}
+           docker tag ${local.repository_name}:${var.image_tag} ${aws_ecr_repository.repo.repository_url}:${var.image_tag}
+           docker push ${aws_ecr_repository.repo.repository_url}:${var.image_tag}
        EOF
   }
 }
@@ -40,7 +50,7 @@ data "aws_ecr_image" "lambda_image" {
     null_resource.ecr_image
   ]
   repository_name = local.ecr_repository_name
-  image_tag       = local.image_tag
+  image_tag       = var.image_tag
 }
 
 resource "aws_iam_role" "lambda" {
@@ -105,14 +115,14 @@ resource "aws_lambda_function" "lambda" {
   package_type  = "Image"
 }
 
-resource "aws_cloudwatch_event_rule" "every_ten_minutes" {
-  name                = "every-ten-minutes"
-  description         = "Fires every ten minutes"
-  schedule_expression = "rate(10 minutes)"
+resource "aws_cloudwatch_event_rule" "sched" {
+  name                = "ck_trigger"
+  description         = "triggers the lambda function that generates CloudKeep metrics"
+  schedule_expression = var.schedule_expression
 }
 
-resource "aws_cloudwatch_event_target" "every_ten_minutes" {
-  rule      = aws_cloudwatch_event_rule.every_ten_minutes.name
+resource "aws_cloudwatch_event_target" "sched_target" {
+  rule      = aws_cloudwatch_event_rule.sched.name
   target_id = "lambda"
   arn       = aws_lambda_function.lambda.arn
 }
@@ -122,6 +132,6 @@ resource "aws_lambda_permission" "allow_cloudwatch_to_call_lambda" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.lambda.function_name
   principal     = "events.amazonaws.com"
-  source_arn    = aws_cloudwatch_event_rule.every_ten_minutes.arn
+  source_arn    = aws_cloudwatch_event_rule.sched.arn
 }
 
