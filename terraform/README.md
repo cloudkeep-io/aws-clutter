@@ -6,7 +6,7 @@ Terraform module for adding a CloudWatch metric to monitor "clutter" in the AWS 
 * Deploys a containerized version of [aws-clutter-meter](https://github.com/cloudkeep-io/aws-clutter-meter) as a Lambda function.
 * Lambda function is triggered by CloudWatch Events. (Default every 10 minute.)
 
-## Usage
+## Usage Example
 ```
 module "ck_metrics" {
   source = "github.com/cloudkeep-io/aws-clutter-meter//terraform"
