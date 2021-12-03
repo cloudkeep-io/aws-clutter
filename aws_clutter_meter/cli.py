@@ -61,15 +61,43 @@ def sample_and_post():
 
     metric_data = []
     for rz in dvs.keys():
+        # create granular metrics
+        for dv in dvs[rz]:
+            metric_data.append({
+                'MetricName': 'DetachedEBSVolCost',
+                'Dimensions': [
+                    {
+                        'Name': 'RZ_CODE',
+                        'Value': rz
+                    },
+                    {
+                        'Name': 'COST_UNIT',
+                        'Value': dv["MonthlyCostUnit"]
+                    },
+                    {
+                        'Name': 'VOL_ID',
+                        'Value': dv['VolumeId']
+                    },
+                    {
+                        'Name': 'VOL_TYPE',
+                        'Value': dv['VolumeType']
+                    }
+                ],
+                'Timestamp': timestamp,
+                'Unit': 'None',
+                'Value': dv['MonthlyCost']
+            })
+
+        # create aggregate metrics
         if len(dvs[rz]):
             rz_count = len(dvs[rz])
-            rz_cost = sum(v["MonthlyCost"] for v in dvs[rz])
-            unit = dvs[rz][0]["MonthlyCostUnit"]
+            rz_cost = sum(v['MonthlyCost'] for v in dvs[rz])
+            unit = dvs[rz][0]['MonthlyCostUnit']
             metric_data.append({
                 'MetricName': 'DetachedEBSCount',
                 'Dimensions': [
                     {
-                        'Name': 'SRC_RZ_CODE',
+                        'Name': 'RZ_CODE',
                         'Value': rz
                     }
                 ],
@@ -81,7 +109,7 @@ def sample_and_post():
                 'MetricName': 'DetachedEBSMonthlyCost',
                 'Dimensions': [
                     {
-                        'Name': 'SRC_RZ_CODE',
+                        'Name': 'RZ_CODE',
                         'Value': rz
                     },
                     {
@@ -96,10 +124,11 @@ def sample_and_post():
 
     if len(metric_data):
         client = boto3.client('cloudwatch')
-        client.put_metric_data(
-            Namespace='CloudKeep',
-            MetricData=metric_data
-        )
+        for i in range(0, len(metric_data), 20):
+            client.put_metric_data(
+                Namespace='CloudKeep',
+                MetricData=metric_data[i:i+20]
+            )
 
 
 def print_summary(dvs):

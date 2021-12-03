@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws-clutter-meter"
-version = "0.8.21"
+version = "0.8.24"
 description = ""
 authors = ["Shinichi Urano <s@urano.me>"]
 
