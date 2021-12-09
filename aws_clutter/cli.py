@@ -7,9 +7,10 @@ from importlib_resources import files
 from .tools import boto3_paginate, DateTimeJSONEncoder
 from importlib_metadata import version
 from datetime import datetime
+from collections import defaultdict
 
 EBS_PRICING = json.loads(
-    files('aws_clutter_meter.data')
+    files('aws_clutter.data')
     .joinpath('ebs_pricing.json')
     .read_text()
 )
@@ -18,7 +19,7 @@ PRICE_MAP = {price['rzCode']: price['ebs_prices'] for price in EBS_PRICING}
 
 
 @click.group()
-@click.version_option(version=version('aws_clutter_meter'))
+@click.version_option(version=version('aws_clutter'))
 def cli():
     '''
     Detached EBS Cost Monitor command line interface
@@ -60,6 +61,8 @@ def sample_and_post():
     asyncio.run(list_dvs(dvs))
 
     metric_data = []
+    total_count = 0
+    total_cost = defaultdict(float)
     for rz in dvs.keys():
         # create granular metrics
         for dv in dvs[rz]:
@@ -88,11 +91,13 @@ def sample_and_post():
                 'Value': dv['MonthlyCost']
             })
 
-        # create aggregate metrics
+        # create regional aggregate metrics
         if len(dvs[rz]):
             rz_count = len(dvs[rz])
             rz_cost = sum(v['MonthlyCost'] for v in dvs[rz])
             unit = dvs[rz][0]['MonthlyCostUnit']
+            total_count += rz_count
+            total_cost[unit] += rz_cost
             metric_data.append({
                 'MetricName': 'DetachedEBSCount',
                 'Dimensions': [
@@ -121,6 +126,27 @@ def sample_and_post():
                 'Unit': 'None',
                 'Value': rz_cost
             })
+
+    # add the total aggregate data
+    metric_data.append({
+        'MetricName': 'DetachedEBSCount',
+        'Timestamp': timestamp,
+        'Unit': 'Count',
+        'Value': rz_count
+    })
+    for unit, cost in total_cost.items():
+        metric_data.append({
+            'MetricName': 'DetachedEBSMonthlyCost',
+            'Dimensions': [
+                {
+                    'Name': 'COST_UNIT',
+                    'Value': unit
+                }
+            ],
+            'Timestamp': timestamp,
+            'Unit': 'None',
+            'Value': cost
+        })
 
     if len(metric_data):
         client = boto3.client('cloudwatch')

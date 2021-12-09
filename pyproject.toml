@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aws-clutter-meter"
+name = "aws-clutter"
 version = "0.8.24"
 description = ""
 authors = ["Shinichi Urano <s@urano.me>"]
@@ -13,7 +13,7 @@ click = "^8.0.3"
 importlib-metadata = "^4.8.1"
 
 [tool.poetry.scripts]
-debs = "aws_clutter_meter.cli:cli"
+awsclutter = "aws_clutter.cli:cli"
 
 [tool.poetry.dev-dependencies]
 

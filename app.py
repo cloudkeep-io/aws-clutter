@@ -1,4 +1,4 @@
-from aws_clutter_meter import cli
+from aws_clutter import cli
 
 
 def handler(event, context):
