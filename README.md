@@ -32,12 +32,20 @@ These custom metrics are created under the name space of `CloudKeep` and have th
 * `COST_UNIT` (only for `DetachedEBSCost`) - required - currency for the EBS cost, as per the AWS pricing metric. Currently, this is 'CNY' for China regions and 'USD' for everywhere else.
 * `RZ_CODE` - optional (default: On) - Region/Zone Code. E.g., `us-east-1`.
 * `VOL_TYPE` - optional (default: Off) - Volume Type. E.g., `gp3`.
-* `VOL_ID` - optional (default: Off) - Volume ID.
+* `VOL_ID` - optional (default: Off) - Volume ID. Always adds `RZ_CODE` and `VOL_TYPE` in the metric with `VOL_ID` in it.
 
 ### Unused Security Groups (Coming soon!)
 
 ## `awsclutter` CLI
-This section WIP.
+```
+awsclutter list
+```
+Lists all the "clutter" resources in JSON.
+
+```
+awsclutter watch [--dry] [--dims <dim1>,<dim2>,...]
+```
+Publishes the CloudWatch metrics based on "clutter" resources. If you pass `--dry`, it will print the CloudWatch metrics instead of pushing them to CloudWatch. You can also specify the dimensions via the `--dims` flag. E.g., `--dims RZ_CODE,VOL_TYPE`.
 
 ### Installation
 This section WIP.

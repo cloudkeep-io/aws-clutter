@@ -1,3 +1,4 @@
+import os
 import boto3
 import json
 import click
@@ -27,9 +28,9 @@ def cli():
     pass
 
 
-@cli.command()
 @click.option('-s', '--summary', is_flag=True, default=False,
               help='Print just a summary')
+@cli.command()
 def list(summary):
     dvs = {}
     asyncio.run(list_dvs(dvs))
@@ -41,9 +42,20 @@ def list(summary):
         ))
 
 
+debs_dims_default = os.getenv('DEBS_DIMS', default="RZ_CODE")
+
+
+@click.option('--dims', is_flag=False, default=debs_dims_default,
+              show_default=True, metavar='<dim1>,<dim2>,...',
+              type=click.STRING,
+              help=('Sets dimensions of CloudWatch metrics for detached '
+                    'EBS volumes'))
+@click.option('--dry', is_flag=True, default=False,
+              help='Just print the custom metrics, do not push to CloudWatch')
 @cli.command()
-def watch():
-    sample_and_post()
+def watch(dims, dry):
+    debs_dims = [d.strip() for d in dims.split(',')]
+    sample_and_post(debs_dims, dry)
 
 
 def lambda_handler(event, context):
@@ -51,103 +63,157 @@ def lambda_handler(event, context):
         print(event)
         print(context)
 
-    sample_and_post()
+    debs_dims = [d.strip() for d in debs_dims_default.split(',')]
+    sample_and_post(debs_dims)
 
 
-def sample_and_post():
+def metric_data_add_debs_count(metric_data, timestamp, count,
+                               rz=None, vol_type=None, vol_id=None):
+    dims = []
+    if rz:
+        dims.append({
+            'Name': 'RZ_CODE',
+            'Value': rz
+        })
+    if vol_type:
+        dims.append({
+            'Name': 'VOL_TYPE',
+            'Value': vol_type
+        })
+    if vol_id:
+        dims.append({
+            'Name': 'VOL_ID',
+            'Value': vol_id
+        })
+    metric_data.append({
+        'MetricName': 'DetachedEBSVolCount',
+        'Dimensions': dims,
+        'Timestamp': timestamp,
+        'Unit': 'None',
+        'Value': count
+    })
+
+
+def metric_data_add_debs_unit_cost(metric_data, timestamp, cost_unit, cost,
+                                   rz=None, vol_type=None, vol_id=None):
+    dims = [
+        {
+            'Name': 'COST_UNIT',
+            'Value': cost_unit
+        }
+    ]
+    if rz:
+        dims.append({
+            'Name': 'RZ_CODE',
+            'Value': rz
+        })
+    if vol_type:
+        dims.append({
+            'Name': 'VOL_TYPE',
+            'Value': vol_type
+        })
+    if vol_id:
+        dims.append({
+            'Name': 'VOL_ID',
+            'Value': vol_id
+        })
+    metric_data.append({
+        'MetricName': 'DetachedEBSVolCost',
+        'Dimensions': dims,
+        'Timestamp': timestamp,
+        'Unit': 'None',
+        'Value': cost
+    })
+
+
+def metric_data_add_debs_cost(metric_data, timestamp, unit_cost_dict,
+                              rz=None, vol_type=None, vol_id=None):
+    for unit, cost in unit_cost_dict.items():
+        metric_data_add_debs_unit_cost(metric_data, timestamp, unit, cost,
+                                       rz=rz, vol_type=vol_type, vol_id=vol_id)
+
+
+def get_metric_data(dvs, debs_dims):
     timestamp = datetime.utcnow()
+    metric_data = []
+    debs_count = 0
+    debs_cost = defaultdict(float)
+    debs_count_rz = defaultdict(int)
+    debs_cost_rz = defaultdict(lambda: defaultdict(float))
+    debs_count_vtype = defaultdict(int)
+    debs_cost_vtype = defaultdict(lambda: defaultdict(float))
+    debs_count_rz_vtype = defaultdict(lambda: defaultdict(int))
+    debs_cost_rz_vtype = defaultdict(
+        lambda: defaultdict(lambda: defaultdict(float)))
 
+    for rz in dvs.keys():
+        for dv in dvs[rz]:
+            cost_unit = dv['MonthlyCostUnit']
+            cost = dv['MonthlyCost']
+            vol_type = dv['VolumeType']
+            vol_id = dv['VolumeId']
+
+            # create the most granular metrics
+            if 'VOL_ID' in debs_dims:
+                metric_data_add_debs_unit_cost(metric_data, timestamp,
+                                               cost_unit, cost, rz=rz,
+                                               vol_type=vol_type,
+                                               vol_id=vol_id)
+
+            # update aggregations
+            debs_count_rz_vtype[rz][vol_type] += 1
+            debs_cost_rz_vtype[rz][vol_type][cost_unit] += cost
+            debs_count_vtype[vol_type] += 1
+            debs_cost_vtype[vol_type][cost_unit] += cost
+            debs_count_rz[rz] += 1
+            debs_cost_rz[rz][cost_unit] += cost
+            debs_count += 1
+            debs_cost[cost_unit] += cost
+
+        # create regional aggregate metrics
+        if 'RZ_CODE' in debs_dims:
+            if debs_count_rz[rz]:
+                metric_data_add_debs_count(metric_data, timestamp,
+                                           debs_count_rz[rz], rz=rz)
+                metric_data_add_debs_cost(metric_data, timestamp,
+                                          debs_cost_rz[rz], rz=rz)
+            if 'VOL_TYPE' in debs_dims:
+                for vol_type, count in debs_count_rz_vtype[rz].items():
+                    metric_data_add_debs_count(metric_data, timestamp, count,
+                                               rz=rz, vol_type=vol_type)
+                    metric_data_add_debs_cost(metric_data, timestamp,
+                                              debs_cost_rz_vtype[rz][vol_type],
+                                              rz=rz, vol_type=vol_type)
+
+    # add the vol_type aggregate (cross-regional) metrics
+    if 'VOL_TYPE' in debs_dims:
+        for vol_type, count in debs_count_vtype.items():
+            metric_data_add_debs_count(metric_data, timestamp, count,
+                                       vol_type=vol_type)
+            metric_data_add_debs_cost(metric_data, timestamp,
+                                      debs_cost_vtype[vol_type],
+                                      vol_type=vol_type)
+
+    # add the total aggregate data
+    metric_data_add_debs_count(metric_data, timestamp, debs_count)
+    metric_data_add_debs_cost(metric_data, timestamp, debs_cost)
+
+    return metric_data
+
+
+def sample_and_post(debs_dims, dry=False):
     dvs = {}
     asyncio.run(list_dvs(dvs))
 
-    metric_data = []
-    total_count = 0
-    total_cost = defaultdict(float)
-    for rz in dvs.keys():
-        # create granular metrics
-        for dv in dvs[rz]:
-            metric_data.append({
-                'MetricName': 'DetachedEBSVolCost',
-                'Dimensions': [
-                    {
-                        'Name': 'RZ_CODE',
-                        'Value': rz
-                    },
-                    {
-                        'Name': 'COST_UNIT',
-                        'Value': dv["MonthlyCostUnit"]
-                    },
-                    {
-                        'Name': 'VOL_ID',
-                        'Value': dv['VolumeId']
-                    },
-                    {
-                        'Name': 'VOL_TYPE',
-                        'Value': dv['VolumeType']
-                    }
-                ],
-                'Timestamp': timestamp,
-                'Unit': 'None',
-                'Value': dv['MonthlyCost']
-            })
+    metric_data = get_metric_data(dvs, debs_dims)
 
-        # create regional aggregate metrics
-        if len(dvs[rz]):
-            rz_count = len(dvs[rz])
-            rz_cost = sum(v['MonthlyCost'] for v in dvs[rz])
-            unit = dvs[rz][0]['MonthlyCostUnit']
-            total_count += rz_count
-            total_cost[unit] += rz_cost
-            metric_data.append({
-                'MetricName': 'DetachedEBSCount',
-                'Dimensions': [
-                    {
-                        'Name': 'RZ_CODE',
-                        'Value': rz
-                    }
-                ],
-                'Timestamp': timestamp,
-                'Unit': 'Count',
-                'Value': rz_count
-            })
-            metric_data.append({
-                'MetricName': 'DetachedEBSMonthlyCost',
-                'Dimensions': [
-                    {
-                        'Name': 'RZ_CODE',
-                        'Value': rz
-                    },
-                    {
-                        'Name': 'COST_UNIT',
-                        'Value': unit
-                    }
-                ],
-                'Timestamp': timestamp,
-                'Unit': 'None',
-                'Value': rz_cost
-            })
+    if dry:
+        print(json.dumps(
+            metric_data, sort_keys=True, indent=4, cls=DateTimeJSONEncoder
+        ))
+        return
 
-    # add the total aggregate data
-    metric_data.append({
-        'MetricName': 'DetachedEBSCount',
-        'Timestamp': timestamp,
-        'Unit': 'Count',
-        'Value': rz_count
-    })
-    for unit, cost in total_cost.items():
-        metric_data.append({
-            'MetricName': 'DetachedEBSMonthlyCost',
-            'Dimensions': [
-                {
-                    'Name': 'COST_UNIT',
-                    'Value': unit
-                }
-            ],
-            'Timestamp': timestamp,
-            'Unit': 'None',
-            'Value': cost
-        })
-
+    # push metrics to CloudWatch
     if len(metric_data):
         client = boto3.client('cloudwatch')
         for i in range(0, len(metric_data), 20):
