@@ -21,4 +21,4 @@ module "ck_metrics" {
 | ---- | ----------- | ---- | ------- | -------- |
 | image_tag | Docker image tag to use | String | latest | no |
 | schedule_expression | How often to run the Lambda function that generates the clutter metrics. See [this doc](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) for expression syntax. | String | rate(10 minutes) | no |
-
+| DEBS_DIMS | Comma separated list of dimensions to be added to the DetachedEBSCount and DetachedEBSMonthlyCost metrics. E.g., 'RZCode,VolumeType' | String | RZCode | no |

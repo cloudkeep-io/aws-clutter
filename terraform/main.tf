@@ -113,6 +113,13 @@ resource "aws_lambda_function" "lambda" {
   timeout       = 300
   image_uri     = "${aws_ecr_repository.repo.repository_url}@${data.aws_ecr_image.lambda_image.id}"
   package_type  = "Image"
+
+  # Env Vars
+  environment {
+    variables = {
+      DEBS_DIMS = var.DEBS_DIMS
+    }
+  }
 }
 
 resource "aws_cloudwatch_event_rule" "sched" {
