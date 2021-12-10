@@ -17,6 +17,8 @@ EBS_PRICING = json.loads(
 )
 
 PRICE_MAP = {price['rzCode']: price['ebs_prices'] for price in EBS_PRICING}
+DEBS_DIMS_DEFAULT = os.getenv('DEBS_DIMS', default="RZCode")
+NAMESPACE = os.getenv('CK_NAMESPACE', default='CloudKeep')
 
 
 @click.group()
@@ -42,10 +44,7 @@ def list(summary):
         ))
 
 
-debs_dims_default = os.getenv('DEBS_DIMS', default="RZ_CODE")
-
-
-@click.option('--dims', is_flag=False, default=debs_dims_default,
+@click.option('--dims', is_flag=False, default=DEBS_DIMS_DEFAULT,
               show_default=True, metavar='<dim1>,<dim2>,...',
               type=click.STRING,
               help=('Sets dimensions of CloudWatch metrics for detached '
@@ -63,7 +62,7 @@ def lambda_handler(event, context):
         print(event)
         print(context)
 
-    debs_dims = [d.strip() for d in debs_dims_default.split(',')]
+    debs_dims = [d.strip() for d in DEBS_DIMS_DEFAULT.split(',')]
     sample_and_post(debs_dims)
 
 
@@ -72,21 +71,21 @@ def metric_data_add_debs_count(metric_data, timestamp, count,
     dims = []
     if rz:
         dims.append({
-            'Name': 'RZ_CODE',
+            'Name': 'RZCode',
             'Value': rz
         })
     if vol_type:
         dims.append({
-            'Name': 'VOL_TYPE',
+            'Name': 'VolumeType',
             'Value': vol_type
         })
     if vol_id:
         dims.append({
-            'Name': 'VOL_ID',
+            'Name': 'VolumeId',
             'Value': vol_id
         })
     metric_data.append({
-        'MetricName': 'DetachedEBSVolCount',
+        'MetricName': 'DetachedEBSCount',
         'Dimensions': dims,
         'Timestamp': timestamp,
         'Unit': 'None',
@@ -98,27 +97,27 @@ def metric_data_add_debs_unit_cost(metric_data, timestamp, cost_unit, cost,
                                    rz=None, vol_type=None, vol_id=None):
     dims = [
         {
-            'Name': 'COST_UNIT',
+            'Name': 'Currency',
             'Value': cost_unit
         }
     ]
     if rz:
         dims.append({
-            'Name': 'RZ_CODE',
+            'Name': 'RZCode',
             'Value': rz
         })
     if vol_type:
         dims.append({
-            'Name': 'VOL_TYPE',
+            'Name': 'VolumeType',
             'Value': vol_type
         })
     if vol_id:
         dims.append({
-            'Name': 'VOL_ID',
+            'Name': 'VolumeId',
             'Value': vol_id
         })
     metric_data.append({
-        'MetricName': 'DetachedEBSVolCost',
+        'MetricName': 'DetachedEBSMonthlyCost',
         'Dimensions': dims,
         'Timestamp': timestamp,
         'Unit': 'None',
@@ -154,7 +153,7 @@ def get_metric_data(dvs, debs_dims):
             vol_id = dv['VolumeId']
 
             # create the most granular metrics
-            if 'VOL_ID' in debs_dims:
+            if 'VolumeId' in debs_dims:
                 metric_data_add_debs_unit_cost(metric_data, timestamp,
                                                cost_unit, cost, rz=rz,
                                                vol_type=vol_type,
@@ -171,13 +170,13 @@ def get_metric_data(dvs, debs_dims):
             debs_cost[cost_unit] += cost
 
         # create regional aggregate metrics
-        if 'RZ_CODE' in debs_dims:
+        if 'RZCode' in debs_dims:
             if debs_count_rz[rz]:
                 metric_data_add_debs_count(metric_data, timestamp,
                                            debs_count_rz[rz], rz=rz)
                 metric_data_add_debs_cost(metric_data, timestamp,
                                           debs_cost_rz[rz], rz=rz)
-            if 'VOL_TYPE' in debs_dims:
+            if 'VolumeType' in debs_dims:
                 for vol_type, count in debs_count_rz_vtype[rz].items():
                     metric_data_add_debs_count(metric_data, timestamp, count,
                                                rz=rz, vol_type=vol_type)
@@ -186,7 +185,7 @@ def get_metric_data(dvs, debs_dims):
                                               rz=rz, vol_type=vol_type)
 
     # add the vol_type aggregate (cross-regional) metrics
-    if 'VOL_TYPE' in debs_dims:
+    if 'VolumeType' in debs_dims:
         for vol_type, count in debs_count_vtype.items():
             metric_data_add_debs_count(metric_data, timestamp, count,
                                        vol_type=vol_type)
@@ -218,7 +217,7 @@ def sample_and_post(debs_dims, dry=False):
         client = boto3.client('cloudwatch')
         for i in range(0, len(metric_data), 20):
             client.put_metric_data(
-                Namespace='CloudKeep',
+                Namespace=NAMESPACE,
                 MetricData=metric_data[i:i+20]
             )
 

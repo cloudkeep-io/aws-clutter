@@ -3,7 +3,7 @@
 .PHONY: deploy
 deploy:
 	poetry build
-	poetry run pip uninstall aws-clutter-meter -y
+	poetry run pip uninstall aws-clutter -y
 	poetry install
 
 # convenience target

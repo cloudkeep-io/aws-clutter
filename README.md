@@ -26,13 +26,17 @@ Thus, it's common that these detached volumes exist in a given AWS environment. 
 
 `awsclutter` allows an AWS admin to keep track of these detached EBS volumes by creating the following CloudWatch custom metrics:
 * `DetachedEBSCount` - number of detached EBS volumes
-* `DetachedEBSCost` - monthly cost of detached EBS volumes
+* `DetachedEBSMonthlyCost` - monthly cost of detached EBS volumes
 
 These custom metrics are created under the name space of `CloudKeep` and have the following dimensions:
-* `COST_UNIT` (only for `DetachedEBSCost`) - required - currency for the EBS cost, as per the AWS pricing metric. Currently, this is 'CNY' for China regions and 'USD' for everywhere else.
-* `RZ_CODE` - optional (default: On) - Region/Zone Code. E.g., `us-east-1`.
-* `VOL_TYPE` - optional (default: Off) - Volume Type. E.g., `gp3`.
-* `VOL_ID` - optional (default: Off) - Volume ID. Always adds `RZ_CODE` and `VOL_TYPE` in the metric with `VOL_ID` in it.
+* `Currency` (only for `DetachedEBSCost`) - required - currency for the EBS cost, as per the AWS pricing metric. Currently, this is 'CNY' for China regions and 'USD' for everywhere else.
+* `RZCode` - Region/Zone Code. E.g., `us-east-1`.
+* `VolumeType` - Volume Type. E.g., `gp3`.
+* `VolumeId` - Volume ID. Note the dimensions `RZCode` and `VolumeType` are always added to the metric with `VolumeId` in it.
+
+A metric without a certain dimension represents a summation over the missing dimension. For example, `DetachedEBSCount` without any dimensions is the total number of all the Detached EBS Volumes (across all the regions and volume types). `DetachedEBSCount[RZCode]` represents the total number of detached EBS volumes in the specified `RZCode`.
+
+By default, custom metrics with the dimension of `RZCode` is added. One can specify that additional dimensions are also surfaced as CloudWatch metrics as well.
 
 ### Unused Security Groups (Coming soon!)
 

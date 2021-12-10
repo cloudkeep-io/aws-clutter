@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws-clutter"
-version = "0.8.24"
+version = "0.9.0"
 description = ""
 authors = ["Shinichi Urano <s@urano.me>"]
 
