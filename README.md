@@ -36,7 +36,7 @@ These custom metrics are created under the name space of `CloudKeep` and have th
 
 A metric without a certain dimension represents a summation over the missing dimension. For example, `DetachedEBSCount` without any dimensions is the total number of all the Detached EBS Volumes (across all the regions and volume types). `DetachedEBSCount[RZCode]` represents the total number of detached EBS volumes in the specified `RZCode`.
 
-By default, custom metrics with the dimension of `RZCode` is added. One can specify that additional dimensions are also surfaced as CloudWatch metrics as well.
+By default, custom metrics with the dimension of `RZCode` is added. You can specify additional dimensions to be surfaced via an environment variable `DEBS_DIMS`, by setting it to a list of dimensions, separated by a comma. E.g., `"RZCode,VolumeType"`.
 
 ### Unused Security Groups (Coming soon!)
 
@@ -47,9 +47,10 @@ awsclutter list
 Lists all the "clutter" resources in JSON.
 
 ```
-awsclutter watch [--dry] [--dims <dim1>,<dim2>,...]
+awsclutter watch [--dry-run]
 ```
-Publishes the CloudWatch metrics based on "clutter" resources. If you pass `--dry`, it will print the CloudWatch metrics instead of pushing them to CloudWatch. You can also specify the dimensions via the `--dims` flag. E.g., `--dims RZ_CODE,VOL_TYPE`.
+Publishes the CloudWatch metrics based on "clutter" resources. If you pass `--dry-run`, it will print the CloudWatch metrics instead of pushing them to CloudWatch. 
+
 
 ### Installation
 This section WIP.
