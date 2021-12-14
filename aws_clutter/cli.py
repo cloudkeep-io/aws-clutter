@@ -44,26 +44,11 @@ def list(summary):
         ))
 
 
-@click.option('--dims', is_flag=False, default=DEBS_DIMS_DEFAULT,
-              show_default=True, metavar='<dim1>,<dim2>,...',
-              type=click.STRING,
-              help=('Sets dimensions of CloudWatch metrics for detached '
-                    'EBS volumes'))
 @click.option('--dry-run', is_flag=True, default=False,
               help='Just print the custom metrics, do not push to CloudWatch')
 @cli.command()
-def watch(dims, dry_run):
-    debs_dims = [d.strip() for d in dims.split(',')]
-    sample_and_post(debs_dims, dry_run)
-
-
-def lambda_handler(event, context):
-    if False:
-        print(event)
-        print(context)
-
-    debs_dims = [d.strip() for d in DEBS_DIMS_DEFAULT.split(',')]
-    sample_and_post(debs_dims)
+def watch(dry_run):
+    sample_and_post(dry_run)
 
 
 def metric_data_add_debs_count(metric_data, timestamp, count,
@@ -200,7 +185,9 @@ def get_metric_data(dvs, debs_dims):
     return metric_data
 
 
-def sample_and_post(debs_dims, dry_run=False):
+def sample_and_post(dry_run=False):
+    debs_dims = [d.strip() for d in DEBS_DIMS_DEFAULT.split(',')]
+
     dvs = {}
     asyncio.run(list_dvs(dvs))
 
