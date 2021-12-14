@@ -1,6 +1,6 @@
 locals {
-  repository_name     = "cloudkeep/aws-clutter-meter"
-  function_name       = "aws-clutter-meter"
+  repository_name     = "cloudkeep/aws-clutter"
+  function_name       = "aws-clutter"
   ecr_repository_name = local.repository_name
 }
 
