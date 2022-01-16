@@ -487,6 +487,56 @@
         "ebs_prices": {
             "gp2": {
                 "pricePerGBMonth": {
+                    "USD": "0.1200000000"
+                }
+            },
+            "gp3": {
+                "pricePerGBMonth": {
+                    "USD": "0.0960000000"
+                },
+                "pricePerGiBpsMonth": {
+                    "USD": "49.1520000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0060000000"
+                }
+            },
+            "io1": {
+                "pricePerGBMonth": {
+                    "USD": "0.1380000000"
+                },
+                "pricePerIOPSMonth": {
+                    "USD": "0.0720000000"
+                }
+            },
+            "sc1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0180000000"
+                }
+            },
+            "st1": {
+                "pricePerGBMonth": {
+                    "USD": "0.0540000000"
+                }
+            },
+            "standard": {
+                "pricePerGBMonth": {
+                    "USD": "0.0800000000"
+                },
+                "pricePerIOs": {
+                    "USD": "0.0000000800"
+                }
+            }
+        },
+        "location": "Asia Pacific (Jakarta)",
+        "partition": "aws",
+        "rzCode": "ap-southeast-3",
+        "rzType": "region"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
                     "USD": "0.1100000000"
                 }
             },
@@ -1709,6 +1759,42 @@
         },
         "location": "Asia Pacific (KDDI) - Tokyo",
         "rzCode": "apne1-wl1-nrt-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1550000000"
+                }
+            }
+        },
+        "location": "Europe (VODAFONE) - Berlin",
+        "rzCode": "euc1-wl1-ber-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1550000000"
+                }
+            }
+        },
+        "location": "Europe (Vodafone) - Dortmund",
+        "rzCode": "euc1-wl1-dtm-wlz1",
+        "rzType": "wavelength_zone"
+    },
+    {
+        "ebs_prices": {
+            "gp2": {
+                "pricePerGBMonth": {
+                    "USD": "0.1550000000"
+                }
+            }
+        },
+        "location": "Europe (VODAFONE) - Munich",
+        "rzCode": "euc1-wl1-muc-wlz1",
         "rzType": "wavelength_zone"
     },
     {

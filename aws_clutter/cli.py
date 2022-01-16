@@ -297,7 +297,7 @@ def get_cost_gp3(volume, pricing):
     # add Throughput cost
     if int(volume['Throughput']) > 125:
         cost += (float(pricing['pricePerGiBpsMonth'][unit]) *
-                 (int(volume['Throughput']) - 125)/1000)
+                 (int(volume['Throughput']) - 125)/1024)
 
     return (unit, cost)
 
@@ -315,17 +315,17 @@ def get_cost_io2(volume, pricing):
 
     # add Tier 3 IOPS cost
     if int(volume['Iops']) > 64000:
-        cost += (float(pricing['pricePerT3IOPSMonth'][unit]) *
+        cost += (float(pricing['pricePerTier3IOPSMonth'][unit]) *
                  (int(volume['Iops']) - 64000))
 
     # add Tier 2 IOPS cost
     if int(volume['Iops']) > 32000:
-        cost += (float(pricing['pricePerT2IOPSMonth'][unit]) *
-                 max((int(volume['Iops']) - 32000), 32000))
+        cost += (float(pricing['pricePerTier2IOPSMonth'][unit]) *
+                 min((int(volume['Iops']) - 32000), 32000))
 
     # add Tier 1 IOPS cost
-    cost += (float(pricing['pricePerT1IOPSMonth'][unit]) *
-             max(int(volume['Iops']), 32000))
+    cost += (float(pricing['pricePerTier1IOPSMonth'][unit]) *
+             min(int(volume['Iops']), 32000))
 
     return (unit, cost)
 
