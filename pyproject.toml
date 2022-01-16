@@ -16,6 +16,7 @@ importlib-metadata = "^4.8.1"
 awsclutter = "aws_clutter.cli:cli"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

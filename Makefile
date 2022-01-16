@@ -21,3 +21,6 @@ publish:
 	docker push cloudkeep/aws-clutter:$$(poetry version -s)
 	docker push cloudkeep/aws-clutter:latest
 
+.PHONY: update-pricing
+update-pricing:
+	curl https://cloudkeep-io.github.io/ebs-pricing/ebs_pricing.json -o aws_clutter/data/ebs_pricing.json
