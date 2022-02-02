@@ -12,13 +12,14 @@ resource "aws_cloudwatch_metric_alarm" "debs_alarm" {
   dimensions = {
     Currency = "USD"
   }
-  namespace         = "CloudKeep"
-  period            = 60
-  statistic         = "Maximum"
-  threshold         = "25"
-  alarm_description = "This alarm goes to alarm when the monthly cost of detached EBS volumes (that are measured in USD) exceeds $25"
-  alarm_actions     = [aws_sns_topic.ops_alarms.arn]
-  ok_actions        = [aws_sns_topic.ops_alarms.arn]
+  namespace          = "CloudKeep"
+  period             = 60
+  statistic          = "Maximum"
+  threshold          = "25"
+  alarm_description  = "This alarm goes to alarm when the monthly cost of detached EBS volumes (that are measured in USD) exceeds $25"
+  alarm_actions      = [aws_sns_topic.ops_alarms.arn]
+  ok_actions         = [aws_sns_topic.ops_alarms.arn]
+  treat_missing_data = "ignore"
 }
 
 resource "aws_sns_topic" "ops_alarms" {

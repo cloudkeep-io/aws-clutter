@@ -1,0 +1,1526 @@
+{
+    "af-south-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0300000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0095000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0300000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0047000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0167000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0071000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0300000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-east-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0277000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0088000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0277000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0044000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0154000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0066000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0277000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-northeast-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0243000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0243000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0135000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0243000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-northeast-2": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0125000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-northeast-3": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0243000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0243000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0135000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0243000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-south-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0239000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0239000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0133000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0239000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-southeast-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0140000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-southeast-2": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0140000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ap-southeast-3": {
+        "application": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "ca-central-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0247500000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0088000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0247500000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0044000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0138000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0066000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0247500000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "eu-central-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0270000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0270000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0042000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0147000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0270000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "eu-north-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0239400000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0076000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0239400000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0038000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0133000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0057000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0239400000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "eu-south-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0265000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0084000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0265000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0042000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0147000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0063000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0265000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "eu-west-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0140000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "eu-west-2": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0264600000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0084000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0264600000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0147000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0264600000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "eu-west-3": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0264600000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0084000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0264600000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0042000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0147000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0063000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0264600000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "me-south-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0277200000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0088000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0277200000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0044000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0154000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0066000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0277200000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "sa-east-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0340000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0110000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0340000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0055000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0189000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0082500000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0340000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "us-east-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0125000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "us-east-2": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0125000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "us-gov-east-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0320000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0100000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0320000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0050000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0178000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0075000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0320000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "us-gov-west-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0320000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0100000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0320000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0050000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0178000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0075000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0320000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "us-west-1": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0140000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0252000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "us-west-2": {
+        "application": {
+            "outpost": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0000000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            },
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0080000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "gateway": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0040000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0125000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        },
+        "network": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0060000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0225000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    },
+    "us-west-2-lax-1": {
+        "application": {
+            "region": {
+                "LCUUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0096000000"
+                    },
+                    "unit": "LCU-Hrs"
+                },
+                "LoadBalancerUsage": {
+                    "pricePerUnit": {
+                        "USD": "0.0270000000"
+                    },
+                    "unit": "Hrs"
+                }
+            }
+        }
+    }
+}

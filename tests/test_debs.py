@@ -1,8 +1,6 @@
 import pytest
 import math
-from aws_clutter.cli import (
-    enrich_vol_info
-)
+import aws_clutter.clutter.debs as debs
 
 
 # Expected costs are gotten from https://calculator.aws/#/createCalculator/EBS
@@ -78,7 +76,7 @@ from aws_clutter.cli import (
 ])
 def test_enrich_vol_info(test_data):
     vol = test_data['vol']
-    enrich_vol_info(vol, test_data['rzCode'])
+    debs.enrich_vol_info(vol, test_data['rzCode'])
     assert(vol['RZCode'] == test_data['rzCode'])
     assert(vol['MonthlyCostUnit'] == test_data['expectedMonthlyCostUnit'])
     assert(math.isclose(vol['MonthlyCost'], test_data['expectedMonthlyCost'],
