@@ -86,7 +86,8 @@ data "aws_iam_policy_document" "lambda" {
   statement {
     actions = [
       "ec2:DescribeRegions",
-      "ec2:DescribeVolumes"
+      "ec2:DescribeVolumes",
+      "elasticloadbalancing:DescribeLoadBalancers"
     ]
     effect    = "Allow"
     resources = ["*"]
