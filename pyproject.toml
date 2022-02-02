@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws-clutter"
-version = "0.9.3"
+version = "0.9.5"
 description = "monitor the cost of unused AWS resources"
 authors = ["Shinichi Urano <s@urano.me>"]
 readme = "README.md"

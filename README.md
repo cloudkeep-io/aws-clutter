@@ -22,10 +22,10 @@ awsclutter list --summary
 # detailed list of debs (detached EBS):
 awsclutter list debs 
 
-# for any resource type, to get its description (replace `debs` below with the resource type in question):
+# using jq to get a resource type description (here, for resource type 'debs'):
 awsclutter list debs | jq '.debs.description`
 
-# using jq to identify the properties of 'debs' resource type:
+# using jq to identify the properties (attributes) of 'debs' resource type:
 awsclutter list debs | jq '.debs.resources."us-east-1"[0] | keys'
 
 # to push cloudwatch metrics:
@@ -34,15 +34,15 @@ awsclutter watch
 # to see what the cloudwatch metrics look like (without actually pushing them):
 awsclutter watch --dry-run
 
-# to see what the cloudwatch custom metric names and their dimensions look like:
+# using jq to compactly print the custom metrics and their dimensions:
 awsclutter watch --dry-run | jq -r '.[] | .MetricName + "[" + ( [.Dimensions[].Name] | join(",")) + "]"' | sort
 ```
 
 ## Installing as Lambda
-If you're familiar with Terraform, see the [README](https://github.com/cloudkeep-io/aws-clutter/blob/main/terraform/README.md) under `terraform` directory. This is a Terraform module that installs this Python code as a Lambda function that will get triggered on a schedule (by default every 10 minutes.) Once deployed, look under the namespace CloudKeep in CloudWatch for the various custom metrics. More details on these metrics below.
+If you're familiar with Terraform, see the [README](https://github.com/cloudkeep-io/aws-clutter/blob/main/terraform/README.md) under `terraform` directory. This is a Terraform module that installs this Python code as a Lambda function that will get triggered on a schedule (by default every 10 minutes.) The Lambda function calls the `awsclutter watch` method. Once deployed, look under the namespace CloudKeep in CloudWatch for the various custom metrics. More details on these metrics below.
 
 
-## Clutter Type debs - Detached (Orphaned) EBS Volumes
+## Clutter Type "debs" - Detached (Orphaned) EBS Volumes
 
 Detached EBS (Elastic Block Storage) volumes constitue one of the most common sources of AWS cost that creeps up over time. When an EC2 instance is instantiated and extra storage is desired, it is easy to add an EBS volume. At the time of instantiation, there is an option to "Delete on Termination" (of the EC2 instance). The default is "No".
 
@@ -64,7 +64,8 @@ A metric without a certain dimension represents a summation over the missing dim
 
 By default, custom metrics with the dimension of `RZCode` is added. You can specify additional dimensions to be surfaced via an environment variable `DEBS_DIMS`, by setting it to a list of dimensions, separated by a comma. E.g., `"RZCode,VolumeType"`.
 
-## Clutter Type ulbs - Unused Load Balancers
+
+## Clutter Type "ulbs" - Unused Load Balancers
 
 Unused load balancers can come about when the actual servers and/or Lambda functions that backend the load balancer are removed. Even if a load balancer is not being used at all, it incurs a charge, and so we collect their info here.
 
