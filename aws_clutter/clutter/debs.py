@@ -42,9 +42,9 @@ def summarize(dvs):
         print("No Detached EBS Volumes found.")
     else:
         for unit in units:
-            print(f"Found {summary[unit]['count']} detached EBS volumes "
-                  f"with monthly run cost of {summary[unit]['cost']} {unit} "
-                  f"in regions: {summary[unit]['rzs']}")
+            print(f"[debs] Found {summary[unit]['count']} detached EBS volumes"
+                  f" with monthly run cost of {summary[unit]['cost']} {unit}"
+                  f" in regions: {summary[unit]['rzs']}")
 
 
 def aggregate(dvs):

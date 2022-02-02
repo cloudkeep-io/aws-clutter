@@ -1,8 +1,14 @@
 [tool.poetry]
 name = "aws-clutter"
-version = "0.9.1"
-description = ""
+version = "0.9.3"
+description = "monitor the cost of unused AWS resources"
 authors = ["Shinichi Urano <s@urano.me>"]
+readme = "README.md"
+license = "MIT"
+include = [
+	"README.md",
+	"LICENSE",
+]
 
 [tool.poetry.dependencies]
 python = ">=3.7.10 <4"
@@ -17,6 +23,7 @@ awsclutter = "aws_clutter.cli:cli"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
+twine = "^3.7.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

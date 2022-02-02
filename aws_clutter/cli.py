@@ -1,4 +1,5 @@
 import os
+import sys
 import boto3
 import json
 import click
@@ -8,6 +9,7 @@ import aws_clutter.clutter as clutter
 import aws_clutter.tools as tools
 
 NAMESPACE = os.getenv('CK_NAMESPACE', default='CloudKeep')
+CLUTTER_TYPES = ['debs', 'ulbs']
 
 
 @click.group()
@@ -23,29 +25,46 @@ def cli():
     pass
 
 
+@click.argument('clutter_type', nargs=-1)
 @click.option('-s', '--summary', is_flag=True, default=False,
               help='Print just a summary')
 @cli.command()
-def list(summary):
+def list(clutter_type, summary):
     '''
     list the discovered clutter resources
     '''
+    for ct in clutter_type:
+        if ct not in CLUTTER_TYPES:
+            print(f"Unknown clutter type {ct}")
+            sys.exit(1)
+
     dvs = {}
     ulbs = {}
-    asyncio.run(clutter.debs.query(dvs))
-    asyncio.run(clutter.ulbs.query(ulbs))
+    result = {}
+    if len(clutter_type) == 0:
+        clutter_type = CLUTTER_TYPES
+
+    if 'debs' in clutter_type:
+        asyncio.run(clutter.debs.query(dvs))
+        result['debs'] = {
+            'description': 'Detached EBS Volumes',
+            'resources': dvs
+        }
+    if 'ulbs' in clutter_type:
+        asyncio.run(clutter.ulbs.query(ulbs))
+        result['ulbs'] = {
+            'description': 'Unused Load Balancers',
+            'resources': ulbs
+        }
+
     if (summary):
-        clutter.debs.summarize(dvs)
-        clutter.ulbs.summarize(ulbs)
+        if 'debs' in clutter_type:
+            clutter.debs.summarize(dvs)
+        if 'ulbs' in clutter_type:
+            clutter.ulbs.summarize(ulbs)
     else:
-        print(json.dumps(
-            {
-                'DetachedEBSVolumes': dvs,
-                'UnusedLBs': ulbs
-            },
-            sort_keys=True, indent=4,
-            cls=tools.DateTimeJSONEncoder
-        ))
+        print(json.dumps(result, sort_keys=True, indent=4,
+                         cls=tools.DateTimeJSONEncoder))
 
 
 async def get_metric_data(metric_data):
