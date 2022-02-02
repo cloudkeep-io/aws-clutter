@@ -42,9 +42,10 @@ def summarize(ulbs):
         print("No Unused Load Balancers found.")
     else:
         for unit in units:
-            print(f"Found {summary[unit]['count']} unused Load Balancers "
-                  f"with monthly run cost of {summary[unit]['cost']} {unit} "
-                  f"in regions: {summary[unit]['rzs']}")
+            print(f"[ulbs] Found {summary[unit]['count']} unused Load "
+                  f"Balancers with monthly run cost of "
+                  f"{summary[unit]['cost']} {unit} in regions: "
+                  f"{summary[unit]['rzs']}")
 
 
 def aggregate(ulbs):
@@ -187,7 +188,7 @@ def metric_data_add_ulbs_count(metric_data, timestamp, count,
         })
     if lb_type:
         dims.append({
-            'Name': 'LoadBalancerType',
+            'Name': 'LBType',
             'Value': lb_type
         })
     metric_data.append({
@@ -221,7 +222,7 @@ def metric_data_add_ulbs_unit_cost(metric_data, timestamp, cost_unit, cost,
         })
     if lb_type:
         dims.append({
-            'Name': 'LoadBalancerType',
+            'Name': 'LBType',
             'Value': lb_type
         })
     metric_data.append({
