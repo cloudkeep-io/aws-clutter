@@ -67,27 +67,32 @@ def list(clutter_type, summary):
                          cls=tools.DateTimeJSONEncoder))
 
 
-async def get_metric_data(metric_data):
+async def get_metric_data(clutter_type, metric_data):
     dvs = {}
     ulbs = {}
-    await asyncio.gather(
-        clutter.debs.query(dvs),
-        clutter.ulbs.query(ulbs)
-    )
-    metric_data.extend(clutter.debs.aggregate(dvs))
-    metric_data.extend(clutter.ulbs.aggregate(ulbs))
+    queries = []
+    if 'debs' in clutter_type:
+        queries.append(clutter.debs.query(dvs))
+    if 'ulbs' in clutter_type:
+        queries.append(clutter.ulbs.query(ulbs))
+    await asyncio.gather(*queries)
+    if 'debs' in clutter_type:
+        metric_data.extend(clutter.debs.aggregate(dvs))
+    if 'ulbs' in clutter_type:
+        metric_data.extend(clutter.ulbs.aggregate(ulbs))
     return metric_data
 
 
+@click.argument('clutter_type', nargs=-1)
 @click.option('--dry-run', is_flag=True, default=False,
               help='Just print the custom metrics, do not push to CloudWatch')
 @cli.command()
-def watch(dry_run):
+def watch(clutter_type, dry_run):
     '''
     calculate and push CloudWatch metrics based on clutter resources
     '''
     metric_data = []
-    asyncio.run(get_metric_data(metric_data))
+    asyncio.run(get_metric_data(clutter_type, metric_data))
 
     if dry_run:
         print(json.dumps(

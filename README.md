@@ -67,7 +67,7 @@ By default, custom metrics with the dimension of `RZCode` is added. You can spec
 
 ## Clutter Type "ulbs" - Unused Load Balancers
 
-Unused load balancers can come about when the actual servers and/or Lambda functions that backend the load balancer are removed. Even if a load balancer is not being used at all, it incurs a charge, and so we collect their info here.
+Unused load balancers can come about when the servers and/or Lambda functions that backend the load balancer are removed. Note even if a load balancer is not being used at all, it incurs a charge.
 
 The custom metrics created are:
 * `UnusedLBCount` - number of unused Load Balancers
@@ -77,4 +77,8 @@ And these metrics can have the following dimensions
 * `Currency` (only for `UnusedLBMonthlyCost`) - required - currency for the LB cost, as per the AWS pricing metric. For ELBs, these are all 'USD'.
 * `RZCode` - Region/Zone Code. E.g., `us-east-1`.
 * `LBType` - Load Balancer Type. ('application', 'network', 'gateway') - Note "Classic" is not supported.
+
+
+## See Also
+There is mature open source project called [Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian) which includes some of aws-clutter's functionalities as use cases.
 
