@@ -6,6 +6,7 @@ import concurrent.futures
 from importlib_resources import files
 from .tools import boto3_paginate, DateTimeJSONEncoder
 from importlib_metadata import version
+from datetime import datetime
 
 EBS_PRICING = json.loads(
     files('detached_ebs_cost_monitor.data')
@@ -37,6 +38,68 @@ def list(summary):
         print(json.dumps(
             dvs, sort_keys=True, indent=4, cls=DateTimeJSONEncoder
         ))
+
+
+@cli.command()
+def watch():
+    sample_and_post()
+
+
+def lambda_handler(event, context):
+    if False:
+        print(event)
+        print(context)
+
+    sample_and_post()
+
+
+def sample_and_post():
+    timestamp = datetime.utcnow()
+
+    dvs = {}
+    asyncio.run(list_dvs(dvs))
+
+    metric_data = []
+    for rz in dvs.keys():
+        if len(dvs[rz]):
+            rz_count = len(dvs[rz])
+            rz_cost = sum(v["MonthlyCost"] for v in dvs[rz])
+            unit = dvs[rz][0]["MonthlyCostUnit"]
+            metric_data.append({
+                'MetricName': 'DetachedEBSCount',
+                'Dimensions': [
+                    {
+                        'Name': 'SRC_RZ_CODE',
+                        'Value': rz
+                    }
+                ],
+                'Timestamp': timestamp,
+                'Unit': 'Count',
+                'Value': rz_count
+            })
+            metric_data.append({
+                'MetricName': 'DetachedEBSMonthlyCost',
+                'Dimensions': [
+                    {
+                        'Name': 'SRC_RZ_CODE',
+                        'Value': rz
+                    },
+                    {
+                        'Name': 'COST_UNIT',
+                        'Value': unit
+                    }
+                ],
+                'Timestamp': timestamp,
+                'Unit': 'None',
+                'Value': rz_cost
+            })
+
+    if len(metric_data):
+        client = boto3.client('cloudwatch')
+        client.put_metric_data(
+            Namespace='CloudKeep',
+            MetricData=metric_data
+        )
 
 
 def print_summary(dvs):
